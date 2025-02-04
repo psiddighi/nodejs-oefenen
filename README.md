@@ -89,7 +89,7 @@ Het project maakt gebruik van de volgende middleware:
   ```  
 
 - **Stoppen:**  
-  In de terminal **Ctrl + C** indrukken.  
+  In de terminal **CMD + C** indrukken.  
 
 ## Extra  
 
