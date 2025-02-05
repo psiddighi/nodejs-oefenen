@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boekenlijst</title>
+</head>
+<body>
+  <h1>Onze Boeken</h1>
+  <ul>
+    <% boeken.forEach(function(boek) { %>
+      <li><%= boek.titel %> door <%= boek.auteur %></li>
+    <% }) %>
+  </ul>
+  <a href="/">Terug naar de homepage</a>
+</body>
+</html>
