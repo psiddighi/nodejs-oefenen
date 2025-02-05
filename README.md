@@ -66,8 +66,3 @@ De server draait standaard op `http://localhost:3000`.
 ## Template Engine
 
 De applicatie maakt gebruik van **EJS** als template-engine. De views bevinden zich in de `views/` map en worden gerenderd via `res.render()` in de routes.
-
-## Licentie
-
-Dit project is open-source en kan vrij worden gebruikt en aangepast.
-
