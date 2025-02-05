@@ -1,80 +1,56 @@
-Boekenwinkel API met Express.js
+# Boekenwinkel API met Express.js
 
 Dit project is een eenvoudige Node.js-applicatie met Express.js en de template-engine EJS. Het bevat routes voor een boekenwinkel en maakt gebruik van Winston voor logging.
 
-Installatie
+## Installatie
 
-Kloon de repository
+1. **Kloon de repository**
+   ```sh
+   git clone <repository-url>
+   cd <project-directory>
+   ```
 
-git clone <repository-url>
-cd <project-directory>
+2. **Installeer de benodigde pakketten**
+   ```sh
+   npm install
+   ```
 
-Installeer de benodigde pakketten
+## Gebruik
 
-npm install
+### Start de server
 
-Gebruik
-
-Start de server
-
+```sh
 npm start
+```
 
-De server draait standaard op http://localhost:3000.
+De server draait standaard op `http://localhost:3000`.
 
-Functionaliteiten
+## Functionaliteiten
 
-Homepage (/): Weergave van de welkomstpagina met EJS.
+- **Homepage** (`/`): Weergave van de welkomstpagina met EJS.
+- **Over-pagina** (`/about`): Weergave van een beschrijvende pagina met EJS.
+- **Boeken API** (`/boeken`): Ophalen en toevoegen van boeken via een JSON API.
+- **Logging**: Winston wordt gebruikt voor logging van serveractiviteiten.
 
-Over-pagina (/about): Weergave van een beschrijvende pagina met EJS.
+## Routes
 
-Boeken API (/boeken): Ophalen en toevoegen van boeken via een JSON API.
+| Route         | Methode | Beschrijving |
+|--------------|--------|-------------|
+| `/`          | GET    | Weergave van de homepage |
+| `/about`     | GET    | Weergave van de about-pagina |
+| `/boeken`    | GET    | Ophalen van alle boeken |
+| `/boeken`    | POST   | Een nieuw boek toevoegen |
 
-Logging: Winston wordt gebruikt voor logging van serveractiviteiten.
+## Vereisten
 
-Routes
+- Node.js
+- Express.js
+- Winston
+- EJS
 
-Route
+## Mapstructuur
 
-Methode
-
-Beschrijving
-
-/
-
-GET
-
-Weergave van de homepage
-
-/about
-
-GET
-
-Weergave van de about-pagina
-
-/boeken
-
-GET
-
-Ophalen van alle boeken
-
-/boeken
-
-POST
-
-Een nieuw boek toevoegen
-
-Vereisten
-
-Node.js
-
-Express.js
-
-Winston
-
-EJS
-
-Mapstructuur
-
+```
 /project-root
 │-- /boekenwinkel
 │   ├── /routes
@@ -85,12 +61,13 @@ Mapstructuur
 │-- server.js
 │-- package.json
 │-- README.md
+```
 
-Template Engine
+## Template Engine
 
-De applicatie maakt gebruik van EJS als template-engine. De views bevinden zich in de views/ map en worden gerenderd via res.render() in de routes.
+De applicatie maakt gebruik van **EJS** als template-engine. De views bevinden zich in de `views/` map en worden gerenderd via `res.render()` in de routes.
 
-Licentie
+## Licentie
 
 Dit project is open-source en kan vrij worden gebruikt en aangepast.
 
