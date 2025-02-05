@@ -1,103 +1,96 @@
-Hier is een **README.md** die je kunt gebruiken voor je Express.js boekenwinkelproject:  
+Boekenwinkel API met Express.js
 
----
+Dit project is een eenvoudige Node.js-applicatie met Express.js en de template-engine EJS. Het bevat routes voor een boekenwinkel en maakt gebruik van Winston voor logging.
 
-# Boekenwinkel - Express.js Webapp  
+Installatie
 
-Dit project is een eenvoudige boekenwinkel gebouwd met **Express.js**. Het bevat routing voor **GET** en **POST** requests, middleware voor JSON-verwerking, en is gegenereerd met **Express Generator**.  
+Kloon de repository
 
-## Inhoud  
+git clone <repository-url>
+cd <project-directory>
 
-- [Installatie](#installatie)  
-- [Projectstructuur](#projectstructuur)  
-- [Routes](#routes)  
-- [Middleware](#middleware)  
-- [Starten van de server](#starten-van-de-server)  
+Installeer de benodigde pakketten
 
-## Installatie  
+npm install
 
-1. **Clone de repository**  
-   ```sh
-   git clone <repository-url>
-   cd boekenwinkel
-   ```  
+Gebruik
 
-2. **Installeer de dependencies**  
-   ```sh
-   npm install
-   ```  
+Start de server
 
-3. **Start de server**  
-   ```sh
-   npm start
-   ```  
+npm start
 
-4. **De server draait nu op**  
-   ```
-   http://localhost:3000
-   ```  
+De server draait standaard op http://localhost:3000.
 
-## Projectstructuur  
+Functionaliteiten
 
-```
-boekenwinkel/
-│── bin/             # Startscript voor de server
-│── public/          # Statische bestanden (CSS, afbeeldingen, JS)
-│── routes/          # Express routes
-│   ├── index.js     # Homepage route
-│   ├── users.js     # Gebruikersroute
-│── views/           # Views (Jade/Pug templates)
-│── app.js           # Hoofd Express-applicatie
-│── package.json     # Projectconfiguratie en dependencies
-│── README.md        # Documentatie (dit bestand)
-```  
+Homepage (/): Weergave van de welkomstpagina met EJS.
 
-## Routes  
+Over-pagina (/about): Weergave van een beschrijvende pagina met EJS.
 
-| Methode | Route     | Beschrijving           |
-|---------|----------|------------------------|
-| GET     | `/`      | Homepage               |
-| GET     | `/users` | Gebruikersoverzicht    |
-| POST    | `/books` | Voeg een boek toe      |
+Boeken API (/boeken): Ophalen en toevoegen van boeken via een JSON API.
 
-**Voorbeeld van een GET-request:**  
+Logging: Winston wordt gebruikt voor logging van serveractiviteiten.
 
-```sh
-curl -X GET http://localhost:3000/
-```  
+Routes
 
-**Voorbeeld van een POST-request:**  
+Route
 
-```sh
-curl -X POST http://localhost:3000/books -H "Content-Type: application/json" -d '{"title": "Node.js for Beginners", "author": "John Doe"}'
-```  
+Methode
 
-## Middleware  
+Beschrijving
 
-Het project maakt gebruik van de volgende middleware:  
+/
 
-- `express.json()` → Parseert JSON body  
-- `express.urlencoded({ extended: false })` → Parseert URL-gecodeerde data  
-- `cookie-parser` → Handelt cookies af  
-- `morgan` → Logt inkomende requests  
+GET
 
-## Server starten & stoppen  
+Weergave van de homepage
 
-- **Starten:**  
-  ```sh
-  npm start
-  ```  
+/about
 
-- **Stoppen:**  
-  In de terminal **CMD + C** indrukken.  
+GET
 
-## Extra  
+Weergave van de about-pagina
 
-Wil je de server automatisch laten herstarten bij wijzigingen? Installeer dan **nodemon**:  
+/boeken
 
-```sh
-npm install -g nodemon
-nodemon bin/www
-```  
+GET
 
----  
+Ophalen van alle boeken
+
+/boeken
+
+POST
+
+Een nieuw boek toevoegen
+
+Vereisten
+
+Node.js
+
+Express.js
+
+Winston
+
+EJS
+
+Mapstructuur
+
+/project-root
+│-- /boekenwinkel
+│   ├── /routes
+│   │   ├── boeken.js
+│-- /views
+│   ├── index.ejs
+│   ├── about.ejs
+│-- server.js
+│-- package.json
+│-- README.md
+
+Template Engine
+
+De applicatie maakt gebruik van EJS als template-engine. De views bevinden zich in de views/ map en worden gerenderd via res.render() in de routes.
+
+Licentie
+
+Dit project is open-source en kan vrij worden gebruikt en aangepast.
+
